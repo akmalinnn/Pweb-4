@@ -1,57 +1,24 @@
-const form = document.getElementById('form');
-        const thanks = document.getElementById('thanks');
-        form.onsubmit = submit;
+function submitForm() {
+    // Get values from the form fields
+    var nama = document.getElementById("nama").value;
+    var nrp = document.getElementById("nrp").value;
+    var email = document.getElementById("email").value;
+    var matkul = document.getElementById("matkul").value;
+    var dosen = document.getElementById("dosen").value;
 
-        const nama = document.getElementById('nama');
-        nama.oninvalid = namainvalid;
-        const namaerror = document.getElementById('namaerror');
+    // Check if any of the fields is empty
+    if (nama === "") {
+        alert("Masukkan Nama!");
+    } else if (nrp === "") {
+        alert("Masukkan NRP!");
+    } else if (email === "") {
+        alert("Masukkan Email!");
+    } else if (matkul === "") {
+        alert("Pilih Matkul!");
+    } else if (dosen === "") {
+        alert("Masukkan Nama Dosen!");
+    } else {
+        alert("Terimakasih, Form telah disubmit, " + nama + "!"); 
+    }
+}
 
-        function namainvalid(event) {
-            namaerror.removeAttribute('hidden');
-        }
-
-        const nrp = document.getElementById('nrp');
-        nrp.oninvalid = nrpinvalid;
-        const nrperror = document.getElementById('nrperror');
-
-        function nrpinvalid(event) {
-            nrperror.removeAttribute('hidden');
-        }
-
-        const email = document.getElementById('email');
-        email.oninvalid = emailinvalid;
-        const emailerror = document.getElementById('emailerror');
-
-        function emailinvalid(event) {
-            emailerror.removeAttribute('hidden');
-        }
-
-        const dosen = document.getElementById('dosen');
-        dosen.oninvalid = doseninvalid;
-        const dosenerror = document.getElementById('dosenerror');
-
-        function doseninvalid(event) {
-            dosenerror.removeAttribute('hidden');
-        }
-
-        const matkul = document.getElementById('matkul');
-        matkul.oninvalid = matkulinvalid;
-        const matkulerror = document.getElementById('matkulerror');
-
-        function matkulinvalid(event) {
-            matkulerror.removeAttribute('hidden');
-        }
-        const status = document.getElementById('status');
-        status.oninvalid = statusinvalid;
-        status.onclick = statusvalid;
-        const statuserror = document.getElementById('statuserror');
-
-        function statusinvalid(event) {
-            statuserror.removeAttribute('hidden');
-        }
-
-        function submit(event) {
-            form.setAttribute('hidden', '');
-            thanks.removeAttribute('hidden');
-            event.preventDefault();
-};
