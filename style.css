@@ -58,3 +58,7 @@ button:hover {
     background-color: #1a609d;
 }
 
+#thanks {
+    text-align: center;
+    justify-content: center;
+}

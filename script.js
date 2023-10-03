@@ -50,3 +50,8 @@ const form = document.getElementById('form');
             statuserror.removeAttribute('hidden');
         }
 
+        function submit(event) {
+            form.setAttribute('hidden', '');
+            thanks.removeAttribute('hidden');
+            event.preventDefault();
+};
