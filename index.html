@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="script" href="script.js">
+    <title>Form</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Form Registrasi</h1>
+        <form id="form">
+            <form>
+                <div class="form-group">
+                    <label for="nama"><h4>Nama</h4></label><br>
+                    <input type="nama" class="form-control" id="nama" placeholder="Akmal Nafis" name="nama" required>
+                    <p id="namaerror" hidden>Isi Nama Lengkap</p>
+                </div>
+                <div class="form-group">
+                    <label for="nrp"><h4>NRP</h4></label><br>
+                    <input type="nrp" class="form-control" id="nrp" placeholder="50252112XX" name="nrp" required>
+                    <p id="nrperror" hidden>NRP Tidak Valid</p>
+                </div>
+                <div class="form-group">
+                    <label for="email"><h4>Email</h4></label><br>
+                    <input type="email" class="form-control" id="email" placeholder="Masukkan Email" name="email" required>
+                    <p id="emailerror" hidden>Email tidak Valid</p>
+                </div>
+
+                <div class="form-group">
+                    <label for="matkul"><h4>Mata Kuliah</h4></label><br>
+                    <select id="matkul" name="matkul" required>
+                        <option value="">Pilih Mata Kuliah</option>
+                        <option value="Rekayasa Sistem Berbasis Pengetahuan">Rekayasa Sistem Berbasis Pengetahuan</option>
+                        <option value="Sistem Basis Data">Sistem Basis Data</option>
+                        <option value="Teori Graf">Teori Graf</option>
+                        <option value="Jaringan Komputer">Jaringan Komputer</option>
+                        <option value="Grafika Komputer">Grafika Komputer</option>
+                        <option value="Pemrograman Berbasis Kerangka Kerja">Pemrograman Berbasis Kerangka Kerja</option>
+                        <option value="Pemrograman Web">Pemrograman Web</option>
+                        <option value="Pemodelan dan Simulasi">Pemodelan dan Simulasi</option>
+                      </select>
+                    <p id="matkulerror" hidden>Pilih Mata Kuliah</p>
+                </div>
+
+                <div class="form-group">
+                    <label for="dosen"><h4> Nama Dosen </h4></label><br>
+                    <input type="dosen" class="form-control" id="dosen" placeholder="Masukkan nama Dosen" name="dosen" required>
+                    <p id="dosenerror" hidden>Masukkan Nama Dosen</p>
+                </div>
+
+                <button type="submit" class="button">Submit</button>
+            </form>
+
+
+    </div>
+
+</body>
+</html>
